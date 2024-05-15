@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://delfe0khn7eax"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5wrcm"]
+
+[node name="World" type="Node3D"]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+mesh = SubResource("PlaneMesh_5wrcm")
