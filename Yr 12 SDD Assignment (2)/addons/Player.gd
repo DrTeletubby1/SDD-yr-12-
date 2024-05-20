@@ -12,13 +12,13 @@ var dead = false
 func ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Animated_sprite_2d.animation_finished.connect(shoot_anim_done)
-	$Can
+	$CanvasLayer/Deathscreen/panel/Button.button_up.connect(_restart)
 
 func _input(event):
 	if dead:
 		return
-		if event is InputEventMouseMotion:
-			rotation_degrees.y -= event.relative.x * MOUSE_SENS
+	if event is InputEventMouseMotion:
+		rotation_degrees.y -= event.relative.x * MOUSE_SENS
 
 func _process(delta):
 	if Input.is_action_just_pressed("exit"):
@@ -62,5 +62,5 @@ func shoot_anim_done():
 
 func kill():
 	dead = true
-	$CancasLayer/DeathScreen.show()
+	$CanvasLayer/Deathscreen.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

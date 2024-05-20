@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://addons/Player.gd" id="1_j7oak"]
 [ext_resource type="Texture2D" uid="uid://j7yh62kp5rtu" path="res://addons/Pew pew.png" id="1_kf3hy"]
-[ext_resource type="AudioStream" uid="uid://1f6r4wj1ikss" path="res://Water Gun Sound Effect.mp3" id="3_l2qok"]
+[ext_resource type="AudioStream" uid="uid://bwwblgdlohke" path="res://Water Gun Sound Effect.mp3" id="3_l2qok"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1euvn"]
 
@@ -93,6 +93,8 @@ scale = Vector2(0.679688, 0.576172)
 sprite_frames = SubResource("SpriteFrames_ijhio")
 animation = &"Shoot"
 autoplay = "Idle"
+frame = 2
+frame_progress = 0.522048
 
 [node name="Crosshair" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 8
@@ -145,7 +147,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "You fell!"
 
-[node name="Restart" type="Button" parent="CanvasLayer/Deathscreen"]
+[node name="Button" type="Button" parent="CanvasLayer/Deathscreen"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
