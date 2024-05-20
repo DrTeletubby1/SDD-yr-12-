@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://delfe0khn7eax"]
 
-[ext_resource type="PackedScene" uid="uid://bhpkmfqwm7w83" path="res://addons/skeleton_ik_3d.tscn" id="1_mjqku"]
+[ext_resource type="PackedScene" uid="uid://cmg3sadcpbr1b" path="res://player.tscn" id="1_ddexq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hu42k"]
 albedo_color = Color(1, 0.345098, 0.0392157, 1)
@@ -20,7 +20,7 @@ background_mode = 1
 background_color = Color(0.109804, 0.384314, 0.376471, 1)
 
 [node name="World" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.385829, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.78625, 0)
 
 [node name="Environment" type="Node3D" parent="."]
 
@@ -104,7 +104,6 @@ environment = SubResource("Environment_e5abh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 0.787817, 0.615909, 0, -0.615909, 0.787817, 0, 15.395, -0.0172863)
-shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("1_mjqku")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92878, 0)
+[node name="player" parent="." instance=ExtResource("1_ddexq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224291, 0)
